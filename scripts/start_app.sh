@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["52.2.101.181"]/' /home/ubuntu/Fake_Social_Media_Profile_Detection/Fake_Social_Media_Profile_Detection/settings.py
+sed -i 's/\[]/\["52.2.101.181"]/' /home/ubuntu/Fake_Social_Media_Profile_Detection/Fake_Profile_Detection/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
