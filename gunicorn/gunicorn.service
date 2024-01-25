@@ -6,7 +6,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/Fake_Social_Media_Profile_Detection
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/Fake_Social_Media_Profile_Detection/Fake_Social_Media_Profile_Detection/Fake_Social_Media_Profile_Detection.sock Fake_Social_Media_Profile_Detection.wsgi:application
+ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/Fake_Social_Media_Profile_Detection/Fake_Social_Media_Profile_Detection/Fake_Profile_Detection.sock Fake_Profile_Detection.wsgi:application
 
        
 [Install]
