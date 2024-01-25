@@ -30,3 +30,7 @@ sqlparse==0.2.4
 uritemplate==4.1.1
 urllib3==1.26.13
 whitenoise==6.2.0
+asgiref==3.5.2
+backports.zoneinfo==0.2.1
+Django==4.1.1
+sqlparse==0.4.2
