@@ -1,37 +1,10 @@
 version: 0.0
 os: linux
-files: 
+files:
   - source: /
     destination: /home/ubuntu/Fake_Social_Media_Profile_Detection
-permissions:
-  - object: /home/ubuntu/Fake_Social_Media_Profile_Detection
-    owner: ubuntu
-    group: ubuntu
 hooks:
   BeforeInstall:
-      - location: scripts/clean_instance.sh
-        timeout: 300
-        runas: ubuntu
+      - location: scripts/before_install.sh
   AfterInstall:
-      - location: scripts/instance_os_dependencies.sh
-        timeout: 300
-        runas: ubuntu
-      - location: scripts/python_dependencies.sh
-        timeout: 300
-        runas: ubuntu
-      - location: scripts/gunicorn.sh
-        timeout: 300
-        runas: ubuntu
-      - location: scripts/nginx.sh
-        timeout: 300
-        runas: ubuntu
-  ApplicationStop:
-      - location: scripts/stop_app.sh
-        timeout: 300
-        runas: ubuntu
-  ApplicationStart:
-      - location: scripts/start_app.sh
-        timeout: 300
-        runas: ubuntu
-  
-  
+      - location: scripts/after_install.sh
